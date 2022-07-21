@@ -17,20 +17,39 @@ heap.load("300189463");
   <div> This is a form: </div>
   <br>
 
-  <form class="" action="index.html" method="post">
-    <label for="email"><span>Email:</span></label><br>
+  <form class="" method="post" onsubmit="setIdentity();">
+    <label for="email">Email:</label><br>
     <input type="text" id="email" name="email"><br>
 
-    <p><span>This is a radio input:</span></p>
+    <p>This is a radio input:</p>
     <input type="radio" id="cool" name="radio_example" value="cool">
+    <label for="cool">Cool</label><br>
     <input type="radio" id="super_cool" name="radio_example" value="super_cool">
+    <label for="super_cool">Super Cool</label><br>
     <input type="radio" id="totally_cool" name="fadio_example" value="totally_cool">
+    <label for="totally_cool">Totally Cool</label>
+
+    <p>This is a checkbox input:</p>
+    <input type="checkbox" id="awesome" name="checkbox_example" value="awesome">
+    <label for="awesome"> Awesome </label><br>
+    <input type="checkbox" id="super_awesome" name="checkbox_example" value="super_awesome">
+    <label for="super_awesome"> Super Awesome </label><br>
+    <input type="checkbox" id="totally_awesome" name="checkbox_example" value="totally_awesome">
+    <label for="totally_awesome"> Totally Awesome </label>
 
     <p>This button will submit the form:</p>
     <button type="submit" title="Submit">
       <span>Submit</span>
     </button>
-    </form>
+  </form>
+
+  <script>
+    function setIdentity() {
+      if (document.querySelector('#email')!=null) {
+          heap.identify(document.querySelector('#email').value);
+      }
+    }
+  </script>
 
 </body>
 </html>
