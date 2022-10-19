@@ -8,62 +8,62 @@ window.heap=window.heap||[],heap.load=function(e,t){window.heap.appid=e,window.h
 heap.load("2530958139");
 </script>
 </head>
-<body data-heap-redact-attributes="data-value1">
-  <h1>PS Onboarding Assignment</h1>
+<body>
+  <div data-heap-redact-attributes="data-value1">
+    <h1>PS Onboarding Assignment</h1>
 
-  <div id="divid" class="divclass"> This is a div </div>
+    <div id="divid" class="divclass"> This is a div </div>
 
-  <br>
+    <br>
+    <div id="three" data-value1="redact_me" data-value2="keep_me"> This is a form: </div>
+    <br>
 
-  <div id="three" data-value1="redact_me" data-value2="keep_me"> This is a form: </div>
-  <br>
+    <form class="" onsubmit="setIdentity();">
+      <label for="email">Email:</label><br>
+      <input type="text" id="email" name="email"><br>
 
-  <form class="" onsubmit="setIdentity();">
-    <label for="email">Email:</label><br>
-    <input type="text" id="email" name="email"><br>
+      <p id="radio_input" data-heap-redact-text='true'>This is a radio input:</p>
+      <input type="radio" id="cool" name="radio_example" value="cool">
+      <label for="cool">Cool</label><br>
+      <input type="radio" id="super_cool" name="radio_example" value="super_cool">
+      <label for="super_cool">Super Cool</label><br>
+      <input type="radio" id="totally_cool" name="radio_example" value="totally_cool">
+      <label for="totally_cool">Totally Cool</label>
 
-    <p id="radio_input" data-heap-redact-text='true'>This is a radio input:</p>
-    <input type="radio" id="cool" name="radio_example" value="cool">
-    <label for="cool">Cool</label><br>
-    <input type="radio" id="super_cool" name="radio_example" value="super_cool">
-    <label for="super_cool">Super Cool</label><br>
-    <input type="radio" id="totally_cool" name="radio_example" value="totally_cool">
-    <label for="totally_cool">Totally Cool</label>
-
-    <p heap-ignore='true'>This is a checkbox input:</p>
-    <div>
-    <input type="checkbox" id="awesome" name="checkbox_example" value="awesome">
-    <label for="awesome"> Awesome </label><br>
-    <input type="checkbox" id="super_awesome" name="checkbox_example" value="super_awesome">
-    <label for="super_awesome"> Super Awesome </label><br>
-    <input type="checkbox" id="totally_awesome" name="checkbox_example" value="totally_awesome">
-    <label for="totally_awesome"> Totally Awesome </label>
-    <div>
-
-      <p>This is a single checkbox input:</p>
+      <p heap-ignore='true'>This is a checkbox input:</p>
       <div>
-      <input type="checkbox" id="single_checkbox" value="single_check">
-      <label for="single_checkbox"> Check me! </label><br>
+      <input type="checkbox" id="awesome" name="checkbox_example" value="awesome">
+      <label for="awesome"> Awesome </label><br>
+      <input type="checkbox" id="super_awesome" name="checkbox_example" value="super_awesome">
+      <label for="super_awesome"> Super Awesome </label><br>
+      <input type="checkbox" id="totally_awesome" name="checkbox_example" value="totally_awesome">
+      <label for="totally_awesome"> Totally Awesome </label>
       <div>
 
-    <p>This button will submit the form and call heap.identify with the email provided:</p>
-    <button type="submit" title="Submit">
-      <span>Submit</span>
+        <p>This is a single checkbox input:</p>
+        <div>
+        <input type="checkbox" id="single_checkbox" value="single_check">
+        <label for="single_checkbox"> Check me! </label><br>
+        <div>
+
+      <p>This button will submit the form and call heap.identify with the email provided:</p>
+      <button type="submit" title="Submit">
+        <span>Submit</span>
+      </button>
+    </form>
+
+    <p>This button will not do anything</p>
+    <button id="test">
+      <span>Test</span>
     </button>
-  </form>
 
-  <p>This button will not do anything</p>
-  <button id="test">
-    <span>Test</span>
-  </button>
-
-  <script>
-    function setIdentity() {
-      if (document.querySelector('#email')!=null) {
-          heap.identify(document.querySelector('#email').value);
+    <script>
+      function setIdentity() {
+        if (document.querySelector('#email')!=null) {
+            heap.identify(document.querySelector('#email').value);
+        }
       }
-    }
-  </script>
-
+    </script>
+  <div>
 </body>
 </html>
